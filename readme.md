@@ -1,5 +1,15 @@
 # Menu manager
 
+### Mike's comment :)
+As usual I started implementation from domain. I implemented Menu Aggregate with all operations described in the task using DDD (Rich model) 
+pattern and wrote some unit tests (not all) for this aggregate. And my 4 hours was gone:)
+The next step that I planned to implement is the Application layer. I planned to use the CQRS pattern because it is very easy to implement 
+a global caching mechanism on Query Bus. And if we will have a lot of items in the menu and recording operations will be slow we can 
+very easily make it asynchronous without changes in the Application level code using Command Bus. After that, I planned to connect my 
+Domain and Application to Laravel infrastructure. I planned to use Tactician to implement Query and Command Bus or implement it himself 
+because it's not complicated patterns. Then I planned to implement \Grifix\Demo\Test\Domain\Menu\MenuInfrastructureInterface::publishEvent 
+using Laravel Event Bus. I planned to use Doctrine for the mapping aggregate to the database because it provides better opportunities 
+for persistence ignorance than Eloquent. And as the second part, I planned to implement the UI layer using Laravel Router and Controllers.
 
 ## Table of Contents
 - [Task description](#task-description)
